@@ -31,7 +31,7 @@ public class MailConfig {
 		mailSender.setPort(587);
 
 		mailSender.setUsername(env.getProperty("email"));
-		mailSender.setPassword(env.getProperty("SENDGRID_PASSWORD"));
+		mailSender.setPassword(env.getProperty("password"));
 		
 //		System.out.println("user: " + mailSender.getUsername());
 //		System.out.println("password: " + mailSender.getPassword());
