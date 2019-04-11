@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/LayoutSimples}">
+	
+<th:block layout:fragment="conteudo">
+	
+	<div class="aw-error-panel">
+		<h1 class="aw-error-panel__code">
+			<i class="fa fa-user-times"></i>
+		</h1>
+		
+		<h2 class="aw-error-panel__title">Sessão expirada</h2>
+		
+		<div class="aw-error-panel__description">
+			Essa sessão expirou! <br>
+			Possivel acesso de logins concorrentes.
+			<br/><br/>
+			<a th:href="@{/logout}" class="btn  btn-primary">Tentar novamente</a>
+		</div>
+	</div>
+
+</th:block>
+</html>

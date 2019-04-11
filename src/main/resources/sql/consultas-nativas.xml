@@ -4,7 +4,6 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
 	version="2.1">
 	
-	<!-- tentar fazer um gráfico cons dias da semana, para saber qual dia vende mais-->
 	<named-native-query name="Vendas.totalPorMes" result-set-mapping="totalPorMesMapping">
 		<query>
 			select date_format(data_criacao, '%Y/%m') mes
@@ -47,14 +46,14 @@
 	</named-native-query>
 	
 	<sql-result-set-mapping name="totalPorMesMapping">
-		<constructor-result target-class="com.algaworks.brewer.dto.VendaMes">
+		<constructor-result target-class="com.wilson.brewer.dto.VendaMes">
 			<column name="mes" class="java.lang.String"/>
 			<column name="total" class="java.lang.Integer"/>
 		</constructor-result>
 	</sql-result-set-mapping>
 	
 	<sql-result-set-mapping name="porOrigemMapping">
-		<constructor-result target-class="com.algaworks.brewer.dto.VendaOrigem">
+		<constructor-result target-class="com.wilson.brewer.dto.VendaOrigem">
 			<column name="mes" class="java.lang.String"/>
 			<column name="total_nacional" class="java.lang.Integer"/>
 			<column name="total_internacional" class="java.lang.Integer"/>
